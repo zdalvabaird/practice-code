@@ -150,7 +150,8 @@ def main():
     # with Image.open(image_path) as img:
     #     test_mean = mean_color_square(img, 0, 0, dims[0], dims[1])
     #     print("Helper Test: ", (test_mean == mean_color) )
-
+    # Github test
+    
     avg_img = image_of_avgs(image_path, 20, 15)
     avg_img.show()
 
