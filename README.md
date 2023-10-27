@@ -21,7 +21,7 @@ To run the code, use the following command in the terminal:
 
 ```bash
 python image_main.py <image_path>
-
+```
 ## Dependencies
 This project uses the following Python libraries:
 
@@ -32,3 +32,4 @@ This project was created as part of a Python programming assignment to improve m
 
 Feel free to explore, use, and modify this code for your own learning purposes or image processing needs.
 
+*This README was created by ChatGPT*
