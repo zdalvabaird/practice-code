@@ -122,8 +122,8 @@ def image_of_avgs(image_path, num_x, num_y):
     sq_num = 0
     for x in range(0, num_x):
         for y in range(0, num_y):
-            start_coord = (x * mini_width, y * mini_height)
-            end_coord = ((x + 1) * mini_width, (y + 1) * mini_height)
+            start_coord = (x * mini_width, y * mini_height)  # Upper left corner of rectangle
+            end_coord = ((x + 1) * mini_width, (y + 1) * mini_height)  # Lower right corner of rectangle
             draw.rectangle([start_coord, end_coord], fill=(square_value_list[sq_num]))
             sq_num += 1
     return new_image
@@ -131,13 +131,14 @@ def image_of_avgs(image_path, num_x, num_y):
 
 # Main function to test the above functions
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python image_main.py <image_path>")
+    if len(sys.argv) < 4:
+        print("Usage: python image_main.py <image_path> x_squares y_squares")
         sys.exit(1)
 
         # Use the provided image path
     image_path = sys.argv[1]
-
+    x_squares = int(sys.argv[2])
+    y_squares = int(sys.argv[3])
     # Test get_image_dimensions
     dims = get_image_dimensions(image_path)
     print(f"Image Dimensions: {dims}")
@@ -152,7 +153,7 @@ def main():
     #     print("Helper Test: ", (test_mean == mean_color) )
     # Github test
 
-    avg_img = image_of_avgs(image_path, 20, 15)
+    avg_img = image_of_avgs(image_path, x_squares, y_squares)
     avg_img.show()
 
 
