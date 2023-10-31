@@ -1,3 +1,5 @@
+# Didn't really work out too well, hard to work with the ARIMA library, need to work on stuff like that, reading documentation and such
+# Works except for the fact that it isn't calibrated correctly
 import pandas as pd
 import numpy as np
 from statsmodels.tsa.arima.model import ARIMA
